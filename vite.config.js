@@ -7,11 +7,12 @@ export default defineConfig({
   plugins: [react(), svgr()],
   resolve: {
     alias: {
-      src: "/src",
-      components: "/components",
-      pages: "/src/pages",
-      assets: "/src/assets"
-    }
+      src: '/src',
+      components: '/components',
+      pages: '/src/pages',
+      assets: '/src/assets',
+      api: '/src/api'
+    },
   },
-  base: 'react-vite-template',
+  base: 'events-registration-app',
 });
