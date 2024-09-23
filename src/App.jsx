@@ -1,23 +1,22 @@
 import { useEffect, useState } from 'react';
 import { AppWrapper } from './AppWrapper.styled';
 import { EventsList } from './components/EventsList/EventsList';
-import { getEvents } from './api/requests/eventsrequests';
+import { getEvents } from './api/getEvents';
 
 export default function App() {
   const [events, setEvents] = useState([]);
-  console.log(events);
 
   useEffect(() => {
     const fetch = async () => {
       const resp = await getEvents();
-      setEvents(resp.data);
+      setEvents(resp);
     };
     fetch();
-  }, [events]);
+  }, []);
 
   return (
     <AppWrapper>
-      <EventsList />
+      <EventsList events={events} />
     </AppWrapper>
   );
 }
