@@ -14,5 +14,5 @@ export default defineConfig({
       api: '/src/api'
     },
   },
-  base: 'events-registration-app',
+  base: '/events-registration-app',
 });
